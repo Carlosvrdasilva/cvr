@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Trocar Entre Dois Tanques</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      width: 600px;
+      height: auto;
+      margin-bottom: 20px;
+      border: 2px solid #444;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tanque de Guerra</h2>
+  <img id="imagem" src="https://tankmuseum.org/wp-content/uploads/2020/03/Tiger-II-feat-1100x500.jpg" alt="Tanque Tiger II" />
+  <br>
+  <button onclick="trocarImagem()">Trocar Tanque</button>
+
+  <script>
+    let imagemAtual = 1;
+
+    function trocarImagem() {
+      const img = document.getElementById('imagem');
+
+      if (imagemAtual === 1) {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tiger_131_%287527948486%29.jpg/1200px-Tiger_131_%287527948486%29.jpg";
+        img.alt = "Tanque Tiger I";
+        imagemAtual = 2;
+      } else {
+        img.src = "https://tankmuseum.org/wp-content/uploads/2020/03/Tiger-II-feat-1100x500.jpg";
+        img.alt = "Tanque Tiger II";
+        imagemAtual = 1;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
